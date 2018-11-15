@@ -1,6 +1,6 @@
 # lightdm-webkit2-theme-min
 
-This is a very minimal theme for `lightdm-webkit2-greeter` which allows multiple users and custom wallpapers
+This is a very minimal theme for `lightdm-webkit2-greeter` which allows multiple users and a single custom wallpaper
 
 Default wallpaper is from the official [OnePlus wallpapers](http://www.hampusolsson.com/oneplus/), but can be changed by replacing wallpaper.jpg
 
