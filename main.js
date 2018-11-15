@@ -14,15 +14,9 @@ window.authentication_complete = function() {
     }
 }
 
-function pad(a, b) {
-    return (1e15 + a + "").slice(-b);
-}
-
 function getImg() {
-    index = Math.floor(Math.random() * 25);
-    console.log(pad(index,2));
     document.getElementsByTagName('body')[0].style.backgroundImage = 
-        "url(wallpapers/" + pad(index, 2) + ".png)";
+        "url(wallpaper.jpg)";
 }
 
 window.onload = function() {
