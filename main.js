@@ -19,10 +19,33 @@ function getImg() {
         "url(wallpaper.jpg)";
 }
 
+var date_options = {weekday: 'short', month: 'short', day: 'numeric'}
+
+function showTime(){
+	var date = new Date();
+    var h = date.getHours() % 12 || 12;
+    var m = date.getMinutes();
+    m = (m < 10) ? "0" + m : m;
+    var time = h + ":" + m;
+    document.getElementById("clocktime").innerText = time;
+    document.getElementById("clocktime").textContent = time;
+    setTimeout(showTime, 1000);
+}
+
+function showDate(){
+	var date = new Date();
+	var time = date.toLocaleDateString('en-US', date_options);
+    document.getElementById("clockdate").innerText = time;
+    document.getElementById("clockdate").textContent = time;
+    setTimeout(showTime, 1000);
+}
+
 window.onload = function() {
     getImg();
     input.focus();
     input.select();
+	showTime();
+	showDate();
 }
 
 function authenticate(input_text) {
